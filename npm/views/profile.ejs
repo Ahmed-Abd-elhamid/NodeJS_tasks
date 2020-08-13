@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/stylesheets/style.css">
+    <title>Profile</title>
+</head>
+
+<body>
+    <%- include('layouts/head'); -%>
+
+    <h1>Profile Page</h1>
+    <p>ID: <%= data.id %></p>
+    <p><%= data.name %> </p>
+
+    <% if (data.age > 20) { %>
+    <p>Your age is above 20</p>
+    <% }else{ %>
+    <p>Your age is under 21</p>
+    <% } %>
+
+    <p>Your Hobbies is: </p>
+    <ul>
+        <% data.hobbies.forEach(hobby => { %>
+        <li><%= hobby %></li>
+        <% }) %>
+    </ul>
+
+    <%- include('layouts/foot'); -%>
+</body>
+
+</html>

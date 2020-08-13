@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/stylesheets/style.css">
+    <title>Contact</title>
+</head>
+
+<body class="bg-dark">
+    <h1 class="bg-dark">borde</h1>
+    <%- include('layouts/head'); -%>
+    <form action="" method="get">
+        <label for="search">Search</label>
+        <input type="text" name="search" id="search" value="<%= query.search %> ">
+        <label for="category"></label>
+        <select name="category" id="category">
+            <option value="cat1">Cat1</option>
+            <option value="cat2">Cat2</option>
+            <option value="cat3">Cat3</option>
+        </select>
+        <input type="submit" value="Search">
+    </form>
+    <% if (query.search) { %>
+        <p>Search On: <%= query.search %> </p>
+    <% } %>
+    <hr>
+    <form action="/contact-success" method="post">
+        <label for="search">Search</label>
+        <input type="text" name="search" id="search" value="<%= query.search %> ">
+        <label for="category"></label>
+        <select name="category" id="category">
+            <option value="cat1">Cat1</option>
+            <option value="cat2">Cat2</option>
+            <option value="cat3">Cat3</option>
+        </select>
+        <input type="submit" value="Search">
+    </form>
+    <%- include('layouts/foot'); -%>
+</body>
+
+</html>
