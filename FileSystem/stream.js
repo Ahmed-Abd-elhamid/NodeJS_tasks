@@ -1,4 +1,6 @@
-let fs = require('fs');
+console.log(`Path to file: { Dir: ${__dirname}, file:${__filename}}`);
+
+const fs = require('fs');
 
 // ReadStream and WriteStream
 let myReadStream = fs.createReadStream(`${__dirname}/files/stream/readStream.txt`,"utf8");

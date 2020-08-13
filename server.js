@@ -1,7 +1,7 @@
 console.log(`Path to file: { Dir: ${__dirname}, file:${__filename}}`);
 
-let http = require('http');
-let fs = require('fs');
+const http = require('http');
+const fs = require('fs');
 
 let server = http.createServer((request, response) => {
     if (request.url == '/') {

@@ -1,6 +1,6 @@
 console.log(`Path to file: { Dir: ${__dirname}, file:${__filename}}`);
 
-let fs = require('fs');
+const fs = require('fs');
 
 // Synchronous Process (Blocking the Code till it finished!)..
 function Synchronous(filetoRead, filetoWrite) {

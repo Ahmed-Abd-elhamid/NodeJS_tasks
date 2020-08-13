@@ -1,7 +1,7 @@
 console.log(`Path to file: { Dir: ${__dirname}, file:${__filename}}`);
 
-let events = require('events');
-let util = require('util');
+const events = require('events');
+const util = require('util');
 
 // constructor function
 let Person = function(name, age, gender){
